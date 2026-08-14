@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21454aa2c2c34864bc672f1870281bb7, type: 3}
+  m_Name: PrizeManagerConfig
+  m_EditorClassIdentifier: Tools.PrizeManager::Tools.PrizeManager.Models.PrizeConfig
+  prizes:
+  - id: bola
+    prizeName: Bola
+    totalQuantity: 20
+    awardedQuantity: 0
+    prizeIcon: {fileID: 3639779550037775508, guid: 0c38e2d37147670498381c93be6d5bcd, type: 3}
+    description: 'Category: Perfect'
+  - id: copo
+    prizeName: Copo
+    totalQuantity: 65
+    awardedQuantity: 0
+    prizeIcon: {fileID: -121867222499184566, guid: 8d88edd1621c014429e86f91cf4afe94, type: 3}
+    description: 'Category: Top'
+  - id: mochila
+    prizeName: Mochila
+    totalQuantity: 135
+    awardedQuantity: 0
+    prizeIcon: {fileID: 3759194537766555089, guid: 452b42b2618aacb4ba70297f740ca18a, type: 3}
+    description: 'Category: Medio'
+  - id: pngtree-two-carabiners-carabiner-png-image_11229093
+    prizeName: "Mosquit\xE3o"
+    totalQuantity: 50
+    awardedQuantity: 0
+    prizeIcon: {fileID: 0}
+    description: 'Category: Base'
+  - id: caneta 1
+    prizeName: Caneta
+    totalQuantity: 50
+    awardedQuantity: 0
+    prizeIcon: {fileID: -121867222499184566, guid: 8d88edd1621c014429e86f91cf4afe94, type: 3}
+    description: "Category: M\xE9dio"
+  - id: caneta 1
+    prizeName: Caneta
+    totalQuantity: 50
+    awardedQuantity: 0
+    prizeIcon: {fileID: -121867222499184566, guid: 8d88edd1621c014429e86f91cf4afe94, type: 3}
+    description: "Category: M\xE9dio"
+  persistLocally: 1
+  saveKey: PrizeManager
+  allowMultipleAwardsPerPrize: 1
+  autoSaveOnAward: 1
