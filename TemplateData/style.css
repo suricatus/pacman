@@ -1,0 +1,118 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: #12051d;
+  /* Impede o "puxa e solta" do Safari e a selecao/menu de toque longo,
+     que aparecem quando o jogador toca rapido varias vezes seguidas. */
+  overscroll-behavior: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ocupa a janela inteira e centraliza o canvas; o tamanho do canvas e
+   calculado por JS para ficar sempre em 9:16 (ver ajustarAreaDoJogo). */
+#unity-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#unity-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #12051d;
+  /* Toques rapidos nas respostas nao podem virar zoom ou rolagem da pagina. */
+  touch-action: none;
+}
+
+/* ===== Tela de carregamento =====
+   No 4G o visitante espera alguns segundos antes do primeiro quadro. Sem marca
+   e sem porcentagem, essa espera parece travamento. */
+#suricatus-loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  box-sizing: border-box;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  background: #12051d;
+  color: #ffffff;
+  font-family: 'Trebuchet MS', 'Segoe UI', Arial, sans-serif;
+  text-align: center;
+  transition: opacity .35s ease-out;
+}
+
+#suricatus-loading.pronto { opacity: 0; }
+
+#suricatus-logo {
+  width: 180px;
+  max-width: 45vw;
+  height: auto;
+}
+
+#suricatus-texto {
+  margin: 0;
+  font-size: 17px;
+  letter-spacing: .02em;
+}
+
+#suricatus-barra {
+  width: 260px;
+  max-width: 70vw;
+  height: 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, .14);
+  overflow: hidden;
+}
+
+#suricatus-barra-cheia {
+  width: 0%;
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #e91e63, #00bcd4);
+  transition: width .2s ease-out;
+}
+
+#suricatus-porcento {
+  margin: 0;
+  font-size: 14px;
+  color: #a197b0;
+}
+
+#suricatus-erro {
+  margin: 0;
+  max-width: 320px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #ff8aa5;
+}
+
+#unity-warning {
+  position: absolute;
+  left: 50%;
+  top: 12px;
+  transform: translate(-50%, 0);
+  background: white;
+  padding: 10px;
+  display: none;
+  text-align: center;
+  font-family: arial, sans-serif;
+  z-index: 10;
+}
